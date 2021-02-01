@@ -1,0 +1,27 @@
+{
+  "name": "inro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=development ASSETS_DIR=/home/j/assets GOOGLE_APPLICATION_CREDENTIALS=/home/j/Backend/inro-25d6c-firebase-adminsdk-svqlu-a11c7b7603.json LOGS_DIR=/home/j/Backend/logs babel-node src/app.js",
+    "build": "rm -r bin && NODE_ENV=production babel src --out-dir bin",
+    "app": "NODE_ENV=production ASSETS_DIR=/home/j/assets GOOGLE_APPLICATION_CREDENTIALS=/home/j/Backend/inro-25d6c-firebase-adminsdk-svqlu-a11c7b7603.json LOGS_DIR=/home/j/Backend/logs node bin/app.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel-plugin-source-map-support": "^2.1.1"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.7",
+    "chalk": "^3.0.0",
+    "fastify": "^2.10.0",
+    "firebase-admin": "^8.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.12",
+    "source-map-support": "^0.5.16"
+  }
+}
